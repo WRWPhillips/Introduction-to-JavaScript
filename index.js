@@ -19,7 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 28;
+if(votingAge >= 18){
+  console.log(true);
+}
 
 
 /*
@@ -32,7 +35,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let num1 = 75;
+const num2 = 86;
+if( num1 < num2) {
+  let num1 = num2 - num1;
+}
+console.log(num1);
 
 
 
@@ -47,8 +55,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+const numVar = "1999";
+console.log(Number(numVar));
 
 
 /*
@@ -60,10 +68,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b
 }
-
+multiply(5, 7);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -76,9 +84,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
+dogYears(7);
 
 
 
@@ -149,11 +158,37 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+function computerChooser() {
+  let i = Math.random
+  if(i * 3 > 2) {
+    return "rock";
+  } else if(i * 3 <= 2 && i * 3 > 1) {
+    return "paper";
+  } else {
+    return "scissors";
+  }
+}
+const computer = computerChooser();
 
 function game(user, computer){
-  /*add your code here*/
+  if (user === computer) {
+    return "it's a tie";
+  } else if (user === 'rock' && computer === 'scissors') {
+    return "you win!";
+  } else if (user === 'rock' && computer === 'paper') {
+    return "you lose!";
+  } else if (user === 'scissors' && computer === 'paper') {
+    return "you win!";
+  } else if (user === 'scissors' && computer === 'rock') {
+    return "you lose!";
+  } else if (user === 'paper' && computer === 'rock') {
+    return "you win!";
+  } else if (user === 'paper' && computer === 'scissors') {
+    return "you lose!";
+  }
 }
 
+game("Rock", computer)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
